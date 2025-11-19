@@ -1,0 +1,105 @@
+/* Variables de color inspiradas en paletas oscuras modernas */
+:root {
+  --bg: #111111;
+  --bg2: #1f1f1f;
+  --text: #e1e1e1;
+  --accent: #76c7ff;
+  --accent2: #a0eaff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--bg2);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #333;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+header nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--accent2);
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.welcome h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.posts-preview article {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.posts-preview h2 {
+  font-size: 1.6rem;
+}
+
+.posts-preview a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+
+.posts-preview a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--bg2);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  color: var(--text);
+}
+
+/* Animación de aparición para secciones si quieres usar JS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
